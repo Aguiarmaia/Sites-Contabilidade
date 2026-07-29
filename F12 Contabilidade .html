@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>F12 Contabilidade | Contabilidade em Manaus para empresas</title>
+<!-- Loader temporariamente desativado -->
+<meta name="description" content="Contabilidade completa em Manaus: abertura de empresa, folha de pagamento, fiscal e incentivos da Zona Franca. Atendimento próximo e portal digital para acompanhar tudo online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B1220;
+    --navy-2:#111C30;
+    --blue:#1B66FF;
+    --blue-dark:#1450CC;
+    --green:#22C55E;
+    --ice:#F2F5FA;
+    --white:#FFFFFF;
+    --text:#33404F;
+    --muted:#7C8797;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(11,18,32,.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);line-height:1.65;font-size:16px}
+
+  .services{background:var(--ice)}
+  h1,h2,h3{font-family:'Archivo',sans-serif;color:var(--navy);line-height:1.15}
+  img{max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+  section{padding:50px 0}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:'Archivo',sans-serif;font-weight:700;font-size:1rem;padding:15px 28px;border-radius:12px;transition:.2s;cursor:pointer;border:none;position:relative;overflow:hidden;isolation:isolate}
+  .btn::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(255,255,255,.22) 0 0) no-repeat calc(200% - var(--p,0%)) 100% / 200% var(--p,.2em);transition:.3s var(--t,0s),background-position .3s calc(.3s - var(--t,0s))}
+  .btn:hover::after{--p:100%;--t:.3s}
+  .btn-blue{background:var(--blue);color:#fff}
+  .btn-blue:hover{background:var(--blue-dark);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+  .btn-ghost:hover{border-color:#fff}
+  .btn-wa{background:var(--green);color:#fff}
+  .btn-wa:hover{background:#16A34A;transform:translateY(-2px)}
+  :focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;background:var(--navy);transition:box-shadow .3s}
+  nav.scrolled{box-shadow:0 4px 30px -5px rgba(0,0,0,.35)}
+  .nav-in{display:flex;align-items:right;justify-content:space-between;height:70px;transition:height .3s}
+  nav.scrolled .nav-in{height:56px}
+  .logo{display:flex;align-items:center;gap:12px;color:#fff;font-family:'Archivo',sans-serif;font-weight:800;font-size:1.15rem;white-space:nowrap}
+  nav:not(.scrolled) .logo{display:none}
+  nav:not(.scrolled) .nav-in{justify-content:center}
+  .logo-mark{background:#fff;color:var(--navy);border-radius:9px;width:40px;height:40px;display:grid;place-items:center;font-size:.95rem;font-weight:800}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{color:rgba(255,255,255,.75);font-size:.92rem;font-weight:500;transition:.2s}
+  .nav-links a:hover{color:#fff}
+  .nav-portal{background:var(--blue);color:#fff!important;padding:9px 20px;border-radius:10px;font-weight:600;position:relative;overflow:hidden;isolation:isolate}
+  .nav-portal::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(255,255,255,.22) 0 0) no-repeat calc(200% - var(--p,0%)) 100% / 200% var(--p,.2em);transition:.3s var(--t,0s),background-position .3s calc(.3s - var(--t,0s))}
+  .nav-portal:hover::after{--p:100%;--t:.3s}
+  .nav-portal:hover{background:var(--blue-dark)}
+  .menu-btn{display:none;background:none;border:none;cursor:pointer;width:44px;height:44px;border-radius:10px;padding:0;flex-direction:column;align-items:center;justify-content:center;gap:5px;transition:background .2s}
+  .menu-btn:hover{background:rgba(255,255,255,.08)}
+  .menu-btn-bar{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .2s ease}
+  .menu-btn.open .menu-btn-bar:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .menu-btn.open .menu-btn-bar:nth-child(2){opacity:0}
+  .menu-btn.open .menu-btn-bar:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* HERO */
+  .hero{background:#0B1220/*linear-gradient(160deg,var(--navy) 55%,#132a55 100%);color:#fff*/;padding:-1px 0 170px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-180px;top:-180px;width:520px;height:620px;border-radius:50%;}
+
+  .hero-in{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
+  .hero h1{color:#fff;font-size:clamp(2.1rem,4.4vw,3.3rem);font-weight:800;margin-bottom:28px}
+  .hero h1 em{font-style:normal;color:#6FA0FF}
+  .hero-eyebrow{display:inline-flex;flex-wrap:wrap;row-gap:4px;align-items:center;gap:8px;font-size:.92rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);background:linear-gradient(90deg,rgba(27,102,255,.08),rgba(111,160,255,.04));padding:12px 18px;border-radius:8px;box-shadow:0 10px 30px rgba(11,18,32,.08);transition:transform .25s,box-shadow .25s;margin-top:24px}
+  .hero-eyebrow:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(11,18,32,.12)}
+  .hero p.lead{color:rgba(255,255,255,.78);font-size:1.12rem;max-width:34rem;margin-bottom:32px}
+  .hero-left img{width:100%;height:100%;object-fit:cover;border-radius:18px;box-shadow:var(--shadow)}
+  .hero-left{position:relative;overflow:visible}
+  .hero-left::before{content:"";position:absolute;inset:0;border-radius:18px;pointer-events:none;background:linear-gradient(90deg,var(--navy) 0%,rgba(11,18,32,0) 60%);}
+  .hero-left img{position:relative;z-index:1}
+  @media (max-width:900px){.hero-left::before{display:none}}
+  .hero-hint{margin-top:22px;color:rgba(255,255,255,.85);font-size:1.03rem;text-shadow:0 6px 20px rgba(0,0,0,.45);max-width:44rem}
+
+  /* Flip words (Há 19 anos / confiança / parcerias / ...) */
+  .hero-brand-row{display:flex;align-items:center;gap:36px;margin-bottom:6px}
+  .flip{display:inline-block;height:1.9em;overflow:hidden;vertical-align:middle}
+  .flip-track{display:flex;flex-direction:column;animation:flip-cycle 10s infinite}
+  .flip-item{height:1.9em;line-height:1.9em;color:var(--blue);white-space:nowrap}
+  @keyframes flip-cycle{
+    0%,16%{transform:translateY(0)}
+    20%,36%{transform:translateY(-1.9em)}
+    40%,56%{transform:translateY(-3.8em)}
+    60%,76%{transform:translateY(-5.7em)}
+    80%,96%{transform:translateY(-7.6em)}
+    100%{transform:translateY(-7.6em)}
+  }
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-trust{display:flex;gap:26px;margin-top:42px;flex-wrap:wrap}
+  .trust-item{display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.72);font-size:.9rem}
+  .trust-item svg{flex:none}
+
+
+
+  /* QUEM SOMOS */
+  .about-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+  .about-photo{border-radius:18px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5}
+    .about-photo{position:relative}
+
+    /* Carousel styles */
+    .carousel{position:relative;overflow:hidden;border-radius:18px}
+    .carousel-track{display:flex;transition:transform .45s ease;will-change:transform}
+    .carousel-slide{min-width:100%;box-sizing:border-box;position:relative}
+    .carousel-slide img{display:block;width:100%;height:100%;object-fit:cover}
+    .carousel-caption{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(0,0,0,0.45);color:#fff;padding:10px 14px;border-radius:10px;font-size:.95rem}
+    .carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.45);color:#fff;border:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;cursor:pointer;font-size:1.4rem}
+    .carousel-btn.prev{left:12px}
+    .carousel-btn.next{right:12px}
+    .carousel-dots{position:absolute;left:50%;transform:translateX(-50%);bottom:10px;display:flex;gap:8px}
+    .carousel-dots button{width:10px;height:10px;border-radius:50%;border:none;background:rgba(255,255,255,0.45);cursor:pointer}
+    .carousel-dots button.active{background:#fff}
+  .about h2{margin-bottom:16px}
+  .about p{color:var(--muted);margin-bottom:14px}
+  .about-stats{display:flex;gap:36px;margin-top:24px;flex-wrap:wrap}
+  .about-stats b{display:block;font-family:'Archivo',sans-serif;font-size:1.8rem;color:var(--navy);font-weight:800}
+  .about-stats span{color:var(--muted);font-size:.85rem}
+
+  /* SERVIÇOS */
+  .services{background:var(--ice)}
+  .sec-head{max-width:620px;margin-bottom:52px}
+  .sec-head h2{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:800;margin-bottom:14px}
+  .sec-head p{color:var(--muted);font-size:1.05rem}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:#fff;border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow);transition:.25s;border:1px solid transparent}
+  .card:hover{transform:translateY(-5px);border-color:#D8E4FB}
+  .card .ico{width:48px;height:48px;border-radius:12px;background:#E7EFFF;display:grid;place-items:center;margin-bottom:18px}
+  .card h3{font-size:1.12rem;font-weight:700;margin-bottom:9px}
+  .card p{font-size:.93rem;color:var(--muted)}
+
+
+  /*Card hover effects */
+  
+  .card-anim{overflow:hidden}
+  .card-anim .ico,.card-anim h3,.card-anim p{position:relative;z-index:2}
+  .card-anim .shine{border-radius:inherit;position:absolute;inset:0;z-index:1;overflow:hidden;opacity:0;transition:opacity .5s}
+  .card-anim .shine:before{content:'';width:150%;padding-bottom:150%;border-radius:50%;position:absolute;left:50%;bottom:75%;filter:blur(35px);opacity:.35;transform:translateX(-50%);background-image:conic-gradient(from 205deg at 50% 50%,rgba(27,102,255,0) 0deg,var(--blue) 25deg,rgba(111,160,255,.4) 295deg,rgba(27,102,255,0) 360deg)}
+  .card-anim .bg{border-radius:inherit;position:absolute;inset:0;overflow:hidden;-webkit-mask-image:radial-gradient(circle at 60% 5%,black 0%,black 15%,transparent 60%);mask-image:radial-gradient(circle at 60% 5%,black 0%,black 15%,transparent 60%)}
+  .card-anim .tiles{opacity:0;transition:opacity .25s}
+  .card-anim .tile{position:absolute;background:rgba(27,102,255,.07);animation-duration:8s;animation-iteration-count:infinite;opacity:0}
+  .card-anim .tile-4,.card-anim .tile-6,.card-anim .tile-10{animation-delay:-2s}
+  .card-anim .tile-3,.card-anim .tile-5,.card-anim .tile-8{animation-delay:-4s}
+  .card-anim .tile-2,.card-anim .tile-9{animation-delay:-6s}
+  .card-anim .tile-1{top:0;left:0;height:10%;width:22.5%}
+  .card-anim .tile-2{top:0;left:22.5%;height:10%;width:27.5%}
+  .card-anim .tile-3{top:0;left:50%;height:10%;width:27.5%}
+  .card-anim .tile-4{top:0;left:77.5%;height:10%;width:22.5%}
+  .card-anim .tile-5{top:10%;left:0;height:22.5%;width:22.5%}
+  .card-anim .tile-6{top:10%;left:22.5%;height:22.5%;width:27.5%}
+  .card-anim .tile-7{top:10%;left:50%;height:22.5%;width:27.5%}
+  .card-anim .tile-8{top:10%;left:77.5%;height:22.5%;width:22.5%}
+  .card-anim .tile-9{top:32.5%;left:50%;height:22.5%;width:27.5%}
+  .card-anim .tile-10{top:32.5%;left:77.5%;height:22.5%;width:22.5%}
+  @keyframes card-tile{0%,12.5%,100%{opacity:1}25%,82.5%{opacity:0}}
+  .card-anim .line{position:absolute;inset:0;opacity:0;transition:opacity .35s}
+  .card-anim .line:before,.card-anim .line:after{content:'';position:absolute;background:#D8E4FB;transition:transform .35s}
+  .card-anim .line:before{left:0;right:0;height:1px;transform-origin:0 50%;transform:scaleX(0)}
+  .card-anim .line:after{top:0;bottom:0;width:1px;transform-origin:50% 0;transform:scaleY(0)}
+  .card-anim .line-1:before{top:10%}
+  .card-anim .line-1:after{left:22.5%}
+  .card-anim .line-1:before,.card-anim .line-1:after{transition-delay:.3s}
+  .card-anim .line-2:before{top:32.5%}
+  .card-anim .line-2:after{left:50%}
+  .card-anim .line-2:before,.card-anim .line-2:after{transition-delay:.15s}
+  .card-anim .line-3:before{top:55%}
+  .card-anim .line-3:after{right:22.5%}
+  .card-anim:hover .shine{opacity:1;transition-duration:.5s;transition-delay:0s}
+  .card-anim:hover .tiles{opacity:1;transition-delay:.25s}
+  .card-anim:hover .tile{animation-name:card-tile}
+  .card-anim:hover .line{opacity:1;transition-duration:.15s}
+  .card-anim:hover .line:before{transform:scaleX(1)}
+  .card-anim:hover .line:after{transform:scaleY(1)}
+  .card-anim:hover .line-1:before,.card-anim:hover .line-1:after{transition-delay:0s}
+  .card-anim:hover .line-2:before,.card-anim:hover .line-2:after{transition-delay:.15s}
+  .card-anim:hover .line-3:before,.card-anim:hover .line-3:after{transition-delay:.3s}
+
+
+
+  /* Endereço */
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .loc-map,.loc-photo{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  .loc-map iframe{width:100%;height:340px;display:block}
+  .loc-photo{aspect-ratio:4/3}
+
+  /* SCROLL REVEAL */
+  .fx-reveal{opacity:0;transform:translateY(30px)}
+  .fx-reveal-visible{opacity:1;transform:translateY(0);transition:800ms cubic-bezier(.5,0,0,1)}
+  .grid-3 .card:nth-child(2).fx-reveal-visible{transition-delay:.1s}
+  .grid-3 .card:nth-child(3).fx-reveal-visible{transition-delay:.2s}
+  .grid-3 .card:nth-child(4).fx-reveal-visible{transition-delay:.3s}
+  .grid-3 .card:nth-child(5).fx-reveal-visible{transition-delay:.4s}
+  .grid-3 .card:nth-child(6).fx-reveal-visible{transition-delay:.5s}
+  @media (prefers-reduced-motion:reduce){.fx-reveal{opacity:1;transform:none}.flip-track{animation:none}}
+
+  /* PASSOS */
+  .steps .grid-3 .card{position:relative}
+  .step-n{font-family:'Archivo',sans-serif;font-weight:800;font-size:.8rem;color:var(--blue);letter-spacing:.1em;margin-bottom:12px;display:block}
+
+  /* MAPA CULTURAL */
+  #Mapa-Cultural .grid-3{grid-template-columns:repeat(2,1fr)}
+  #Mapa-Cultural .grid-3 .card{padding:32px 30px}
+  #Mapa-Cultural .card .ico{background:linear-gradient(135deg,#E7EFFF,#F2F5FA)}
+  #Mapa-Cultural .step-n{font-size:1.05rem;margin-bottom:10px;letter-spacing:0}
+  #Mapa-Cultural .card p{color:var(--text)}
+  @media (max-width:860px){#Mapa-Cultural .grid-3{grid-template-columns:1fr}}
+
+  /* CTA FINAL */
+  .cta{background:linear-gradient(135deg,var(--blue),#0D47D9);color:#fff;text-align:center;border-radius:22px;padding:64px 40px;margin:0 24px}
+  .cta h2{color:#fff;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:14px}
+  .cta p{color:rgba(255,255,255,.85);max-width:34rem;margin:0 auto 30px}
+  .cta .btn-wa{background:#fff;color:var(--blue)}
+  .cta .btn-wa:hover{background:#EAF1FF}
+
+  /* FOOTER */
+  footer{background:var(--navy);color:rgba(255,255,255,.7);padding:64px 0 34px;margin-top:88px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;margin-bottom:44px}
+  footer h4{color:#fff;font-family:'Archivo',sans-serif;font-size:.95rem;margin-bottom:16px}
+  footer li{list-style:none;margin-bottom:10px;font-size:.9rem}
+  footer a:hover{color:#fff}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:26px;font-size:.8rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  /* WhatsApp flutuante */
+  .wa-float{position:fixed;bottom:24px;right:24px;z-index:60;background:var(--green);width:58px;height:58px;border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 24px rgba(34,197,94,.45);transition:.2s}
+  .wa-float:hover{transform:scale(1.08)}
+
+  /* PRELOADER */
+  html.preloading,html.preloading body{overflow:hidden;height:100%}
+  #preloader{position:fixed;inset:0;z-index:9999;background:linear-gradient(160deg,var(--navy) 55%,#132a55 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:opacity .6s ease,visibility .6s ease}
+  #preloader.hide{opacity:0;visibility:hidden;pointer-events:none}
+  .pre-logo{width:64px;height:64px;border-radius:14px;background:#fff;color:var(--navy);display:grid;place-items:center;font-family:'Archivo',sans-serif;font-weight:800;font-size:1.35rem;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+  .pre-type{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.4rem;color:#fff;white-space:nowrap;overflow:hidden;border-right:3px solid #6FA0FF;width:0;animation:pre-typewriter 1.8s steps(17) .4s 1 normal forwards,pre-blink 650ms steps(1) infinite}
+  @keyframes pre-typewriter{from{width:0}to{width:14.9ch}}
+  @keyframes pre-blink{50%{border-right-color:transparent}}
+
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+  @media (max-width:1080px){
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);flex-direction:column;padding:22px;gap:18px;border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav-links.open{display:flex}
+    .menu-btn{display:flex}
+    nav:not(.scrolled) .logo{display:flex}
+    nav:not(.scrolled) .nav-in{justify-content:space-between}
+  }
+  @media (max-width:900px){
+    .hero-in,.about-in,.loc-grid{grid-template-columns:1fr}
+    .grid-3{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+    .mock{transform:none;margin-top:10px}
+    section{padding:64px 0}
+    .hero-right{text-align:center}
+    .hero-brand-row{justify-content:center;margin-bottom:10px}
+    .hero-eyebrow{margin-left:auto;margin-right:auto;margin-top:26px;justify-content:center}
+    .hero-hint{margin-left:auto;margin-right:auto;margin-top:24px}
+  }
+  @media (max-width:420px){
+    .logo{font-size:.95rem;gap:8px}
+    .logo-mark{width:34px;height:34px;font-size:.8rem}
+  }
+  
+  /*efeito do botão do whatsapp da conversa inicial*/
+
+  
+
+
+
+</style>
+</head>
+<body>
+
+<main>
+
+<!--leito inicial "logo" F12 Contabilidade !-->
+
+  <div id="preloader">
+    <div class="pre-logo">F12</div> 
+    <div class="pre-type">F12 Contabilidade  </div> 
+  </div> 
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var pl=document.getElementById('preloader');
+  if (pl) {
+    pl.classList.add('hide');
+    document.documentElement.classList.remove('preloading');
+  }
+  window.addEventListener('scroll',function(){
+    document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 100);
+  });
+  (function(){
+    var ratio=0.1;
+    var observer=new IntersectionObserver(function(entries,obs){
+      entries.forEach(function(entry){
+        if(entry.intersectionRatio>ratio){
+          entry.target.classList.add('fx-reveal-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    },{root:null,rootMargin:'0px',threshold:ratio});
+    document.querySelectorAll('.fx-reveal').forEach(function(r){ observer.observe(r); });
+
+    // O efeito zoom-scroll da seção de serviços é 100% CSS
+    // (scroll-driven animations); nenhum JS é necessário para ele.
+  })();
+});
+</script> 
+
+<nav class="site-header">
+  <div class="wrap nav-in">
+    <a href="#" class="logo"><span class="logo-mark">F12</span><span class="logo-text">Contabilidade</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" onclick="const o=document.getElementById('nl').classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',o)">
+      <span class="menu-btn-bar"></span>
+      <span class="menu-btn-bar"></span>
+      <span class="menu-btn-bar"></span>
+    </button>
+    <div class="nav-links" id="nl">
+      <a href="#quem-somos">Quem somos</a>
+      <a href="#servicos">Soluções</a>
+      <a href="#localizacao">Endereço</a>
+      <a href="#como-funciona">Como funciona</a>   
+      <a href="#contato">Contato</a>
+      <a href="#Eventos">Eventos</a>
+      <a class="nav-portal" href="https://f12contabilidade.com.br/" target="_blank" rel="noopener">Portal do Cliente</a>
+    </div>
+  </div>
+</nav> 
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-right">
+      <div class="hero-brand-row">
+        <div class="logo-mark" style="width:64px;height:64px;font-size:1.3rem;flex:none">F12</div>
+        <h1 class="mock" style="margin-bottom:0">Contabilidade</h1>
+      </div>
+      <div class="hero-eyebrow" id="Flip">
+        Há 19 anos com
+        <span class="flip">
+          <span class="flip-track">
+            <span class="flip-item">confiança</span>
+            <span class="flip-item">parcerias</span>
+            <span class="flip-item">resultados</span>
+            <span class="flip-item">crescimento</span>
+            <span class="flip-item">oportunidade</span>
+          </span>
+        </span>
+      </div>
+      <p class="hero-hint">Construindo história de crescimento ao lado de empresários que decidiram levar seus negócios a sério.</p>
+    </div>
+    <div class="hero-left fx-reveal">
+      <img src="img/Capainicial.png" alt="Capa Inicial">
+    </div>
+  </div>
+</header>
+
+<section class="about" id="quem-somos">
+  <div class="wrap about-in">
+    <div class="about-photo fx-reveal">
+      <div class="carousel" aria-label="Carrossel de fotos da equipe">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <img src="img/escritorio-f12.png" alt="Fachada do escritório F12">
+            <div class="carousel-caption">Fachada do escritório</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/team1.jpg" alt="Equipe F12 1">
+            <div class="carousel-caption">Equipe F12 — evento</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/team2.jpg" alt="Equipe F12 2">
+            <div class="carousel-caption">Equipe em atendimento</div>
+          </div>
+        </div>
+        <button class="carousel-btn prev" aria-label="Slide anterior">‹</button>
+        <button class="carousel-btn next" aria-label="Próximo slide">›</button>
+        <div class="carousel-dots" aria-hidden="false"></div>
+      </div>
+    </div>
+    <div class="fx-reveal">
+      <span class="eyebrow">Quem somos</span>
+      <h2>Contadores de Manaus cuidando de empresas de Manaus</h2>
+      <p>Somos especialistas em empresas de serviço.
+        Oferecemos atendimento de excelência para empresas
+        que buscam crescer com segurança, organização e
+        lucratividade. Na F12, a contabilidade é uma
+        ferramenta para gestão e crescimento estratégico.</p>
+      <div class="about-stats">
+        <div><b>100%</b><span>Atendimento local em Manaus</span></div>
+        <div><b>24h</b><span>Acompanhamento pelo Portal do Cliente</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="servicos" aria-label="Soluções da F12 Contabilidade">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Soluções</span>
+      <h2>Tudo que sua empresa precisa, em um só lugar</h2>
+      <!-- <p>Do MEI à indústria incentivada: contabilidade completa com acompanhamento transparente.</p> -->
+    </div>
+
+    <div class="grid-3">
+      <div class="card fx-reveal card-anim">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h3>Assessoria Contábil</h3>
+        <p>Aqui organizamos e acompanhamos toda a
+          contabilidade da sua empresa, garantindo
+          conformidade fiscal e informações seguras e
+          estratégicas para as suas decisões.</p>
+        <div class="shine"></div>
+        <div class="bg">
+          <div class="tiles">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+            <div class="tile tile-4"></div>
+            <div class="tile tile-5"></div>
+            <div class="tile tile-6"></div>
+            <div class="tile tile-7"></div>
+            <div class="tile tile-8"></div>
+            <div class="tile tile-9"></div>
+            <div class="tile tile-10"></div>
+          </div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+      <div class="card fx-reveal card-anim">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 10h8M8 14h5"/></svg></div>
+        <h3>Assessoria Fiscal</h3>
+        <p>Mantemos sua empresa em dia com
+          impostos e tributos, orientando para pagar
+          apenas o necessário e evitar problemas com
+          o fisco.</p>
+        <div class="shine"></div>
+        <div class="bg">
+          <div class="tiles">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+            <div class="tile tile-4"></div>
+            <div class="tile tile-5"></div>
+            <div class="tile tile-6"></div>
+            <div class="tile tile-7"></div>
+            <div class="tile tile-8"></div>
+            <div class="tile tile-9"></div>
+            <div class="tile tile-10"></div>
+          </div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+      <div class="card fx-reveal card-anim">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg></div>
+        <h3>Assessoria Pessoal</h3>
+        <p>Garantimos que sua empresa siga as leis
+          trabalhistas e que sua equipe receba tudo
+          de forma correta e no prazo.</p>
+        <div class="shine"></div>
+        <div class="bg">
+          <div class="tiles">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+            <div class="tile tile-4"></div>
+            <div class="tile tile-5"></div>
+            <div class="tile tile-6"></div>
+            <div class="tile tile-7"></div>
+            <div class="tile tile-8"></div>
+            <div class="tile tile-9"></div>
+            <div class="tile tile-10"></div>
+          </div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+      <div class="card fx-reveal card-anim">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M3 3v18h18"/><path d="m7 15 4-6 4 3 5-8"/></svg></div>
+        <h3>BPO Financeiro</h3>
+        <p>Assumimos a gestão financeira da sua
+          empresa: contas a pagar e receber, fluxo de
+          caixa e conciliações.
+          Com organização e controle, você ganha
+          tempo para focar no crescimento do
+          negócio.</p>
+        <div class="shine"></div>
+        <div class="bg">
+          <div class="tiles">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+            <div class="tile tile-4"></div>
+            <div class="tile tile-5"></div>
+            <div class="tile tile-6"></div>
+            <div class="tile tile-7"></div>
+            <div class="tile tile-8"></div>
+            <div class="tile tile-9"></div>
+            <div class="tile tile-10"></div>
+          </div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+      <div class="card fx-reveal card-anim">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Consultoria Financeira</h3>
+          <p>Analisamos os números do seu negócio
+          e mostramos o caminho para organizar as
+          finanças, aumentar a lucratividade e
+          tomar decisões mais seguras.</p>
+        <div class="shine"></div>
+        <div class="bg">
+          <div class="tiles">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+            <div class="tile tile-4"></div>
+            <div class="tile tile-5"></div>
+            <div class="tile tile-6"></div>
+            <div class="tile tile-7"></div>
+            <div class="tile tile-8"></div>
+            <div class="tile tile-9"></div>
+            <div class="tile tile-10"></div>
+          </div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+      <div class="card fx-reveal card-anim">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div>
+        <h3>Assessoria Societária</h3>
+        <p>Cuidamos da abertura, alteração e
+          regularização da sua empresa.
+          Garantimos que cada detalhe esteja
+          conforme a lei, para que você empreenda
+          com segurança e tranquilidade.</p>
+        <div class="shine"></div>
+        <div class="bg">
+          <div class="tiles">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+            <div class="tile tile-4"></div>
+            <div class="tile tile-5"></div>
+            <div class="tile tile-6"></div>
+            <div class="tile tile-7"></div>
+            <div class="tile tile-8"></div>
+            <div class="tile tile-9"></div>
+            <div class="tile tile-10"></div>
+          </div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="localizacao">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Endereço</span>
+      <h2>Estamos em Manaus, prontos para atender sua empresa</h2>
+      <p>Nosso escritório fica no bairro Adrianópolis, próximo a shoppings e restaurantes. Atendemos presencialmente ou online.</p>
+    </div>
+
+    <div class="loc-grid">
+      <div class="loc-map fx-reveal">
+        <iframe src="https://www.google.com/maps?q=F12+Contabilidade,-3.1083363,-60.0201409&z=17&output=embed" width="100%" height="340" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Endereço da F12 Contabilidade no mapa"></iframe>
+      </div>
+      <div class="loc-photo fx-reveal">
+        <img src="img/escritorio-f12.png" alt="Fachada do escritório F12 Contabilidade" style="width:100%;height:100%;object-fit:cover">
+      </div>
+    </div>
+
+    <div class="grid-3" style="margin-top:44px">
+      <div class="card fx-reveal card-anim">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Endereço</h3>
+        <p>Rua Exemplo, 123, Adrianópolis, Manaus - AM</p>
+        <div class="shine"></div>
+        <div class="bg">
+          <div class="tiles">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+            <div class="tile tile-4"></div>
+            <div class="tile tile-5"></div>
+            <div class="tile tile-6"></div>
+            <div class="tile tile-7"></div>
+            <div class="tile tile-8"></div>
+            <div class="tile tile-9"></div>
+            <div class="tile tile-10"></div>
+          </div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+      <div class="card fx-reveal card-anim">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M22.5 2.5v19h-21v-19h21Z"/><path d="M2.5 7.5h19"/></svg></div>
+        <h3>Contato</h3>
+        <p>WhatsApp: (92) 9 0000-0000<br>Email: contato@f12contabilidade.com.br</p>
+        <div class="shine"></div>
+        <div class="bg">
+          <div class="tiles">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+            <div class="tile tile-4"></div>
+            <div class="tile tile-5"></div>
+            <div class="tile tile-6"></div>
+            <div class="tile tile-7"></div>
+            <div class="tile tile-8"></div>
+            <div class="tile tile-9"></div>
+            <div class="tile tile-10"></div>
+          </div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+      <div class="card fx-reveal card-anim">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+        <h3>Horário</h3>
+        <p>Segunda a sexta, 8h às 18h</p>
+        <div class="shine"></div>
+        <div class="bg">
+          <div class="tiles">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+            <div class="tile tile-4"></div>
+            <div class="tile tile-5"></div>
+            <div class="tile tile-6"></div>
+            <div class="tile tile-7"></div>
+            <div class="tile tile-8"></div>
+            <div class="tile tile-9"></div>
+            <div class="tile tile-10"></div>
+          </div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="como-funciona">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Comece em poucos passos, sem burocracia</h2>
+      <p>Da primeira conversa ao acompanhamento mensal, você sabe exatamente o que está acontecendo.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card fx-reveal card-anim">
+        <span class="step-n">01</span>
+        <h3>Conversa inicial</h3>
+        <p>Você fala com a gente pelo WhatsApp e entendemos a real situação da sua empresa.</p>
+        <div class="shine"></div>
+        <div class="bg">
+          <div class="tiles">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+            <div class="tile tile-4"></div>
+            <div class="tile tile-5"></div>
+            <div class="tile tile-6"></div>
+            <div class="tile tile-7"></div>
+            <div class="tile tile-8"></div>
+            <div class="tile tile-9"></div>
+            <div class="tile tile-10"></div>
+          </div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+      <div class="card fx-reveal card-anim">
+        <span class="step-n">02</span>
+        <h3>Migração e diagnóstico</h3>
+        <p>Cuidamos da troca de contabilidade e organizamos toda a documentação pendente por você.</p>
+        <div class="shine"></div>
+        <div class="bg">
+          <div class="tiles">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+            <div class="tile tile-4"></div>
+            <div class="tile tile-5"></div>
+            <div class="tile tile-6"></div>
+            <div class="tile tile-7"></div>
+            <div class="tile tile-8"></div>
+            <div class="tile tile-9"></div>
+            <div class="tile tile-10"></div>
+          </div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+      <div class="card fx-reveal card-anim">
+        <span class="step-n">03</span>
+        <h3>Rotina no Portal</h3>
+        <p>Acompanhe guias, obrigações e relatórios em tempo real, com suporte humano sempre que precisar.</p>
+        <div class="shine"></div>
+        <div class="bg">
+          <div class="tiles">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+            <div class="tile tile-4"></div>
+            <div class="tile tile-5"></div>
+            <div class="tile tile-6"></div>
+            <div class="tile tile-7"></div>
+            <div class="tile tile-8"></div>
+            <div class="tile tile-9"></div>
+            <div class="tile tile-10"></div>
+          </div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="wrap">
+    <div class="cta fx-reveal">
+      <h2>Vamos cuidar da contabilidade da sua empresa</h2>
+      <p>Fale agora com o nosso time pelo WhatsApp e receba um diagnóstico sem compromisso.</p>
+      <a href="https://wa.me/5592900000000" target="_blank" rel="noopener" class="btn btn-wa">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.36.101 11.943c0 2.105.549 4.16 1.595 5.981L0 24l6.335-1.652a11.882 11.882 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.36 11.949-11.944a11.87 11.87 0 0 0-3.48-8.402"/></svg>
+        <span>Falar no WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="steps" id="Mapa-Cultural">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Nosso Mapa Cultural</span>
+      <h2>Nosso Mapa Cultural</h2>
+      <p>Esta empresa serve ao senhor <strong>Jesus</strong></p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card fx-reveal card-anim">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="#1B66FF"/></svg></div>
+        <span class="step-n">Propósito</span>
+        <p>Somos o braço direito da gestão para realização de sonhos.</p>
+        <div class="shine"></div>
+        <div class="bg">
+          <div class="tiles">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+            <div class="tile tile-4"></div>
+            <div class="tile tile-5"></div>
+            <div class="tile tile-6"></div>
+            <div class="tile tile-7"></div>
+            <div class="tile tile-8"></div>
+            <div class="tile tile-9"></div>
+            <div class="tile tile-10"></div>
+          </div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+      <div class="card fx-reveal card-anim">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <span class="step-n">Visão</span>
+        <p>Ser uma empresa referência em Contabilidade Estratégica através do conhecimento e de conexões no Brasil até 2026.</p>
+        <div class="shine"></div>
+        <div class="bg">
+          <div class="tiles">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+            <div class="tile tile-4"></div>
+            <div class="tile tile-5"></div>
+            <div class="tile tile-6"></div>
+            <div class="tile tile-7"></div>
+            <div class="tile tile-8"></div>
+            <div class="tile tile-9"></div>
+            <div class="tile tile-10"></div>
+          </div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+      <div class="card fx-reveal card-anim">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M12 21s-7-4.35-9.5-8.5C1 9 2.5 5.5 6 5c2-.3 4 .8 6 3 2-2.2 4-3.3 6-3 3.5.5 5 4 3.5 7.5C19 16.65 12 21 12 21Z"/></svg></div>
+        <span class="step-n">Valores</span>
+        <p>Excelência, DNA Estratégico, Coerência, Grandeza, Cultura, Compromisso, Humanidade, Clareza.</p>
+        <div class="shine"></div>
+        <div class="bg">
+          <div class="tiles">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+            <div class="tile tile-4"></div>
+            <div class="tile tile-5"></div>
+            <div class="tile tile-6"></div>
+            <div class="tile tile-7"></div>
+            <div class="tile tile-8"></div>
+            <div class="tile tile-9"></div>
+            <div class="tile tile-10"></div>
+          </div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+      <div class="card fx-reveal card-anim">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 6-6 2 2-6 6-2Z"/></svg></div>
+        <span class="step-n">Missão</span>
+        <p>Levar crescimento estratégico, cultura e
+            conexões para nosso time, clientes,
+            parceiros e sociedade, através da
+            educação, promovendo encontros,
+            buscando inovação sendo sempre o braço
+            direito para quem caminha conosco.</p>
+        <div class="shine"></div>
+        <div class="bg">
+          <div class="tiles">
+            <div class="tile tile-1"></div>
+            <div class="tile tile-2"></div>
+            <div class="tile tile-3"></div>
+            <div class="tile tile-4"></div>
+            <div class="tile tile-5"></div>
+            <div class="tile tile-6"></div>
+            <div class="tile tile-7"></div>
+            <div class="tile tile-8"></div>
+            <div class="tile tile-9"></div>
+            <div class="tile tile-10"></div>
+          </div>
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="about" id="Eventos">
+  <div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">Eventos</span>
+    <h2>Nossos Eventos</h2>
+    <p>2026</p>
+  </div>
+  </div>
+  <div class="wrap about-in"> 
+
+    <div class="about-photo fx-reveal">
+      <div class="carousel" aria-label="Carrossel de fotos de eventos">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <img src="img/event1.jpg" alt="F12 Summit 1">
+            <div class="carousel-caption">F12 Summit — Palestra</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/event2.jpg" alt="F12 Summit 2">
+            <div class="carousel-caption">Networking e conexões</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/event3.jpg" alt="F12 Summit 3">
+            <div class="carousel-caption">Encerramento do evento</div>
+          </div>
+        </div>
+        <button class="carousel-btn prev" aria-label="Slide anterior">‹</button>
+        <button class="carousel-btn next" aria-label="Próximo slide">›</button>
+        <div class="carousel-dots" aria-hidden="false"></div>
+      </div>
+    </div>
+
+    <div class="fx-reveal">
+      <span class="eyebrow">F12 Summit</span>
+      <h2>Fique por dentro dos próximos eventos do F12 Summit</h2>
+      <p>Participe dos nossos encontros e palestras com especialistas, pensados para impulsionar o seu negócio e expandir suas conexões.</p>
+      <!--<div class="about-stats">
+        <div><b>100%</b><span>Atendimento local e Online em Manaus</span></div>
+        <div><b>24h</b><span>Acompanhamento pelo Portal do Cliente</span></div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#" class="logo" style="margin-bottom:16px"><span class="logo-mark">F12</span>Contabilidade</a>
+        <p style="font-size:.9rem;margin-top:14px;max-width:20rem">Contabilidade digital com atendimento humano para empresas de Manaus</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#quem-somos">Quem somos</a></li>
+          <li><a href="#servicos">Soluções</a></li>
+          <li><a href="#localizacao">Endereço</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#Eventos">Eventos</a></li>
+          <li><a href="https://f12contabilidade.com.br/" target="_blank" rel="noopener">Portal do Cliente</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li>WhatsApp: (92) 9 0000-0000</li>
+          <li>contato@f12contabilidade.com.br</li>
+          <li>Manaus · Amazonas</li>
+          <li>Seg a sex, 8h às 18h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 F12 Contabilidade. Todos os direitos reservados.</span>
+      <span>CNPJ 00.000.000/0001-00 · CRC-AM 000000</span>
+    </div>
+  </div>
+  </div>
+</footer>
+
+<script>
+// Carousel initialization
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.carousel').forEach(function(carousel){
+    const track = carousel.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const prevBtn = carousel.querySelector('.carousel-btn.prev');
+    const nextBtn = carousel.querySelector('.carousel-btn.next');
+    const dotsWrap = carousel.querySelector('.carousel-dots');
+    let index = 0;
+    let timer = null;
+
+    function goTo(i){
+      index = (i + slides.length) % slides.length;
+      track.style.transform = 'translateX(' + (-index * 100) + '%)';
+      updateDots();
+    }
+
+    function updateDots(){
+      if(!dotsWrap) return;
+      dotsWrap.innerHTML = '';
+      slides.forEach(function(_,i){
+        const b = document.createElement('button');
+        b.type = 'button';
+        if(i===index) b.classList.add('active');
+        b.addEventListener('click', function(){ goTo(i); resetTimer(); });
+        dotsWrap.appendChild(b);
+      });
+    }
+
+    prevBtn && prevBtn.addEventListener('click', function(){ goTo(index-1); resetTimer(); });
+    nextBtn && nextBtn.addEventListener('click', function(){ goTo(index+1); resetTimer(); });
+
+    function startTimer(){ timer = setInterval(function(){ goTo(index+1); }, 4500); }
+    function resetTimer(){ clearInterval(timer); startTimer(); }
+
+    // generate initial dots and start
+    updateDots();
+    goTo(0);
+    startTimer();
+
+    // pause on hover
+    carousel.addEventListener('mouseenter', function(){ clearInterval(timer); });
+    carousel.addEventListener('mouseleave', function(){ startTimer(); });
+  });
+});
+</script>
+
+<!-- Botão flutuante do WhatsApp -->
+<a class="wa-float" href="https://wa.me/5592900000000" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.36.101 11.943c0 2.105.549 4.16 1.595 5.981L0 24l6.335-1.652a11.882 11.882 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.36 11.949-11.944a11.87 11.87 0 0 0-3.48-8.402"/>
+  </svg>
+</a>
+
+</body>
+</html>
