@@ -48,7 +48,7 @@
   /* NAV */
   nav{position:sticky;top:0;z-index:50;background:var(--navy);transition:box-shadow .3s}
   nav.scrolled{box-shadow:0 4px 30px -5px rgba(0,0,0,.35)}
-  .nav-in{display:flex;align-items:right;justify-content:space-between;height:70px;transition:height .3s}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px;transition:height .3s}
   nav.scrolled .nav-in{height:56px}
   .logo{display:flex;align-items:center;gap:12px;color:#fff;font-family:'Archivo',sans-serif;font-weight:800;font-size:1.15rem;white-space:nowrap}
   nav:not(.scrolled) .logo{display:none}
@@ -255,8 +255,7 @@
     .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);flex-direction:column;padding:22px;gap:18px;border-bottom:1px solid rgba(255,255,255,.08)}
     .nav-links.open{display:flex}
     .menu-btn{display:flex}
-    nav:not(.scrolled) .logo{display:flex}
-    nav:not(.scrolled) .nav-in{justify-content:space-between}
+    nav:not(.scrolled) .nav-in{justify-content:flex-end}
   }
   @media (max-width:900px){
     .hero-in,.about-in,.loc-grid{grid-template-columns:1fr}
@@ -361,11 +360,8 @@ document.addEventListener('DOMContentLoaded',function(){
           </span>
         </span>
       </div>
-      <p class="hero-hint">Um time que entende o seu negócio, unindo tecnologia de ponta a um atendimento próximo de verdade — ao seu lado para crescer com estratégia e segurança</p>
-    </div>
-    <div class="hero-left fx-reveal">
-      <img src="img/Capainicial.png" alt="Capa Inicial">
-    </div>
+      <p class="hero-hint">Construindo história de crescimento ao lado de empresários que decidiram levar seus negócios a sério.</p>
+
   </div>
 </header>
 
@@ -388,6 +384,10 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="about-photo fx-reveal">
       <div class="carousel" aria-label="Carrossel de fotos da equipe">
         <div class="carousel-track">
+          <div class="carousel-slide">
+            <img src="img/Capainicial.png" alt="CEO da F12 Contabilidade">
+            <div class="carousel-caption">CEO da F12</div>
+          </div>
           <div class="carousel-slide">
             <img src="img/escritorio-f12.png" alt="Fachada do escritório F12">
             <div class="carousel-caption">Fachada do escritório</div>
