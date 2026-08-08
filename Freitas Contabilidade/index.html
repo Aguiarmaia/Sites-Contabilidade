@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>F12 Contabilidade</title>
+<title>Perfil Contabilidade</title>
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/favicon.png">
 <!-- Loader temporariamente desativado -->
@@ -13,10 +13,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#0B1220;
-    --navy-2:#111C30;
+    --navy:#276c77;
+    --navy-2:#1B4B54;
     --blue:#2F828F;
-    --blue-dark:#1F565F;
+    --blue-dark:##1F565F;
     --green:#22C55E;
     --ice:#F2F5FA;
     --white:#FFFFFF;
@@ -71,7 +71,7 @@
   .menu-btn.open .menu-btn-bar:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
   /* HERO */
-  .hero{background:#0B1220;padding:0 0 0px;position:relative;overflow:hidden}
+  .hero{background:var(--navy);padding:0 0 0px;position:relative;overflow:hidden}
   .hero::after{content:"";position:absolute;right:-180px;top:-180px;width:520px;height:620px;border-radius:50%;}
 
   .hero-in{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:20px;position:relative;text-align:center;min-height:clamp(340px,50vh,450px)}
@@ -83,7 +83,7 @@
   .hero p.lead{color:rgba(255,255,255,.78);font-size:1.12rem;max-width:34rem;margin-bottom:32px}
   .hero-left img{width:100%;height:100%;object-fit:cover;border-radius:18px;box-shadow:var(--shadow)}
   .hero-left{position:relative;overflow:visible}
-  .hero-left::before{content:"";position:absolute;inset:0;border-radius:18px;pointer-events:none;background:linear-gradient(90deg,var(--navy) 0%,rgba(11,18,32,0) 60%);}
+  .hero-left::before{content:"";position:absolute;inset:0;border-radius:18px;pointer-events:none;background:linear-gradient(90deg,var(--navy) 0%,rgba(39,108,119,0) 60%);}
   .hero-left img{position:relative;z-index:1}
   @media (max-width:900px){.hero-left::before{display:none}}
   .hero-hint{margin-top:22px;margin-left:auto;margin-right:auto;color:rgba(255,255,255,.85);font-size:1.03rem;text-shadow:0 6px 20px rgba(0,0,0,.45);max-width:44rem}
@@ -219,6 +219,32 @@
   #Mapa-Cultural .card p{color:var(--text)}
   @media (max-width:860px){#Mapa-Cultural .grid-3{grid-template-columns:1fr}}
 
+  /* NOTÍCIAS */
+  .news{background:var(--ice)}
+  .news-head{max-width:620px;margin:0 auto 48px;text-align:center}
+  .news-head h2{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:800;margin-bottom:16px}
+  .news-underline{display:inline-block;width:56px;height:3px;background:var(--blue);border-radius:2px}
+  .news-grid{display:flex;gap:22px;overflow-x:auto;padding:4px 4px 22px;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:var(--blue) var(--ice)}
+  .news-grid::-webkit-scrollbar{height:8px}
+  .news-grid::-webkit-scrollbar-track{background:var(--ice);border-radius:8px}
+  .news-grid::-webkit-scrollbar-thumb{background:var(--blue);border-radius:8px}
+  .news-grid::-webkit-scrollbar-thumb:hover{background:var(--blue-dark)}
+  .news-card{flex:0 0 300px;scroll-snap-align:start;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.25s;display:flex;flex-direction:column}
+  .news-card:hover{transform:translateY(-5px)}
+  .news-thumb{height:150px;display:grid;place-items:center;overflow:hidden}
+  .news-thumb img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+  .news-thumb-teal{background:linear-gradient(135deg,var(--navy),var(--navy-2))}
+  .news-thumb-blue{background:linear-gradient(135deg,var(--blue),var(--blue-dark))}
+  .news-body{padding:22px 24px 26px}
+  .news-date{display:block;font-size:.78rem;font-weight:600;letter-spacing:.04em;color:var(--muted);margin-bottom:8px}
+  .news-card h3{font-size:1.05rem;font-weight:700;margin-bottom:9px;line-height:1.35}
+  .news-card h3 a{color:var(--navy)}
+  .news-card h3 a:hover{color:var(--blue)}
+  .news-card p{font-size:.9rem;color:var(--muted);margin-bottom:14px}
+  .news-source{font-size:.8rem;font-weight:600;color:var(--blue);white-space:nowrap}
+  .news-source:hover{color:var(--blue-dark)}
+  @media (max-width:600px){.news-card{flex-basis:82%}}
+
   /* CTA FINAL */
   .cta{background:linear-gradient(135deg,var(--blue),#0D47D9);color:#fff;text-align:center;border-radius:22px;padding:64px 40px;margin:0 24px}
   .cta h2{color:#fff;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:14px}
@@ -241,7 +267,7 @@
 
   /* PRELOADER */
   html.preloading,html.preloading body{overflow:hidden;height:100%}
-  #preloader{position:fixed;inset:0;z-index:9999;background:linear-gradient(160deg,var(--navy) 55%,#132a55 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:opacity .6s ease,visibility .6s ease}
+  #preloader{position:fixed;inset:0;z-index:9999;background:linear-gradient(160deg,var(--navy) 55%,var(--navy-2) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:opacity .6s ease,visibility .6s ease}
   #preloader.hide{opacity:0;visibility:hidden;pointer-events:none}
   .pre-logo{width:64px;height:64px;border-radius:14px;background:#fff;color:var(--navy);display:grid;place-items:center;font-family:'Archivo',sans-serif;font-weight:800;font-size:1.35rem;box-shadow:0 20px 50px rgba(0,0,0,.35)}
   .pre-type{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.4rem;color:#fff;white-space:nowrap;overflow:hidden;border-right:3px solid #6FA0FF;width:0;animation:pre-typewriter 1.8s steps(17) .4s 1 normal forwards,pre-blink 650ms steps(1) infinite}
@@ -292,7 +318,7 @@
 <!--leito inicial "logo" F12 Contabilidade !-->
 
   <div id="preloader">
-    <img src="img/logo-f12.png" alt="F12 Contabilidade Estratégica" style="width:min(280px,62vw);height:auto">
+    <img src="img/perfil-contabilidade.png" alt="Perfil Contabilidade" style="width:min(280px,62vw);height:auto">
   </div> 
 
 <script>
@@ -327,7 +353,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <nav class="site-header">
   <div class="wrap nav-in">
-    <a href="#" class="logo"><img src="img/logo-f12.png" alt="F12 Contabilidade Estratégica" style="height:36px;width:auto;display:block"></a>
+    <a href="#" class="logo"><img src="img/perfil-contabilidade.png" alt="Perfil Contabilidade" style="height:36px;width:auto;display:block"></a>
     <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" onclick="const o=document.getElementById('nl').classList.toggle('open');this.classList.toggle('open',o);this.setAttribute('aria-expanded',o)">
       <span class="menu-btn-bar"></span>
       <span class="menu-btn-bar"></span>
@@ -339,8 +365,8 @@ document.addEventListener('DOMContentLoaded',function(){
       <a href="#localizacao">Endereço</a>
       <a href="#como-funciona">Como funciona</a>   
       <a href="#contato">Contato</a>
-      <a href="#Eventos">Eventos</a>
-      <a class="nav-portal" href="https://f12contabilidade.com.br/" target="_blank" rel="noopener">Portal do Cliente</a>
+      <a href="#noticias">Notícias</a>
+      <a class="nav-portal" href="https://contabildataapp.azurewebsites.net/Account/Login" target="_blank" rel="noopener">Portal do Cliente</a>
     </div>
   </div>
 </nav> 
@@ -349,11 +375,11 @@ document.addEventListener('DOMContentLoaded',function(){
   <div class="wrap hero-in">
     <div class="hero-right">
       <div class="hero-brand-row">
-        <img src="img/logo-f12.png" alt="F12 Contabilidade Estratégica" style="width:min(340px,88%);height:auto;display:block">
+        <img src="img/perfil-contabilidade.png" alt="Perfil Contabilidade" style="width:min(340px,88%);height:auto;display:block">
       </div>
-      <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">F12 Contabilidade Estratégica — contabilidade em Manaus</h1>
+      <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Perfil Contabilidade — contabilidade em Manaus</h1>
       <div class="hero-eyebrow" id="Flip">
-        Há 19 anos com
+        Há 14 anos com
         <span class="flip">
           <span class="flip-track">
             <span class="flip-item">confiança</span>
@@ -364,7 +390,7 @@ document.addEventListener('DOMContentLoaded',function(){
           </span>
         </span>
       </div>
-      <p class="hero-hint">Um time que entende o seu negócio, unindo tecnologia de ponta a um atendimento próximo de verdade — ao seu lado para crescer com estratégia e segurança.</p>
+      <p class="hero-hint">Aqui cuidamos do seu negócio como se fosse nosso, com tecnologia moderna e atendimento próximo de verdade — ao seu lado para crescer com confiança e tranquilidade.</p>
 
   </div>
 </header>
@@ -373,35 +399,34 @@ document.addEventListener('DOMContentLoaded',function(){
   <div class="wrap about-in">
     <div class="fx-reveal">
       <span class="eyebrow">Quem somos</span>
-      <h2>Contadores de Manaus cuidando de empresas de Manaus</h2>
-      <p>Somos especialistas em empresas de serviço.
-        Oferecemos atendimento de excelência para empresas
-        que buscam crescer com segurança, organização e
-        lucratividade. Na F12, a contabilidade é uma
-        ferramenta para gestão e crescimento estratégico.</p>
+      <h2>EXPERIÊNCIA VOCÊ PRECISA. RESULTADOS QUE VOCÊ QUER</h2>
+      <p>É uma empresa que presta serviços para micro, pequenas, médias e grandes empresas nas áreas de Contabilidade, Dpto Fiscal/Tributário, Dpto Pessoal/Trabalhista, processuais, como: abertura, alteração e baixa de Empresas, e Nossa equipe formada por profissionais capacitados para atender com qualidade e eficiência todas as necessidades para manter uma Empresa saudável e competitiva.</p>
       <div class="about-stats">
         <div><b>+200</b><span>Clientes atendidos</span></div>
-        <div><b>100%</b><span>Atendimento local em Manaus</span></div>
-        <div><b>24h</b><span>Acompanhamento pelo <a href="https://f12contabilidade.com.br/" target="_blank" rel="noopener" ><strong>Portal do Cliente</strong></a></span></div>
+        
+        <div><b>24h</b><span>Acompanhamento pelo <a href="https://contabildataapp.azurewebsites.net/Account/Login" target="_blank" rel="noopener" ><strong>Portal do Cliente</strong></a></span></div>
       </div>
     </div>
     <div class="about-photo fx-reveal">
       <div class="carousel" aria-label="Carrossel de fotos da equipe">
         <div class="carousel-track">
           <div class="carousel-slide">
-            <img src="img/Capainicial.png" alt="CEO da F12 Contabilidade">
-            <div class="carousel-caption">CEO da F12</div>
+            <img src="img/CEO.png" alt="###">
+            <div class="carousel-caption">???</div>
           </div>
+
           <div class="carousel-slide">
-            <img src="img/escritorio-f12.png" alt="Fachada do escritório F12">
+            <img src="img/equipe.png" alt="###">
+            <div class="carousel-caption">Equipe em atendimento</div>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="img/fachada2.png" alt="###">
             <div class="carousel-caption">Nosso escritório</div>
           </div>
+
           <div class="carousel-slide">
-            <img src="img/team1.jpg" alt="Equipe F12 1">
-            <div class="carousel-caption">Equipe F12</div>
-          </div>
-          <div class="carousel-slide">
-            <img src="img/team2.jpg" alt="Equipe F12 2">
+            <img src="img/perfil-contabilidade.png" alt="###">
             <div class="carousel-caption">Equipe em atendimento</div>
           </div>
         </div>
@@ -413,7 +438,7 @@ document.addEventListener('DOMContentLoaded',function(){
   </div>
 </section>
 
-<section class="services" id="servicos" aria-label="Soluções da F12 Contabilidade">
+<section class="services" id="servicos" aria-label="Soluções da Perfil Contabilidade">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Soluções</span>
@@ -422,13 +447,10 @@ document.addEventListener('DOMContentLoaded',function(){
     </div>
 
     <div class="grid-3">
-      <div class="card fx-reveal card-anim">
+      <div class="card fx-reveal card-anim" role="link" tabindex="0" aria-label="Abrir endereço no Google Maps" onclick="window.open('https://www.google.com/maps?q=-3.0651237,-60.001828','_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.google.com/maps?q=-3.0651237,-60.001828','_blank')}" style="cursor:pointer">
         <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-        <h3>Assessoria Contábil</h3>
-        <p>Aqui organizamos e acompanhamos toda a
-          contabilidade da sua empresa, garantindo
-          conformidade fiscal e informações seguras e
-          estratégicas para as suas decisões.</p>
+        <h3>Abertura De Empresa</h3>
+        <p>Abrimos sua empresa com todo o suporte necessário, facil e sem burocracia.</p>
         <div class="shine"></div>
         <div class="bg">
           <div class="tiles">
@@ -450,11 +472,11 @@ document.addEventListener('DOMContentLoaded',function(){
       </div>
       <div class="card fx-reveal card-anim">
         <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 10h8M8 14h5"/></svg></div>
-        <h3>Assessoria Fiscal</h3>
-        <p>Mantemos sua empresa em dia com
-          impostos e tributos, orientando para pagar
-          apenas o necessário e evitar problemas com
-          o fisco.</p>
+        <h3>Abertura de Filial</h3>
+          <p>Mantemos sua empresa em dia com
+            impostos e tributos, orientando para pagar
+            apenas o necessário e evitar problemas com
+            o fisco.</p>
         <div class="shine"></div>
         <div class="bg">
           <div class="tiles">
@@ -476,10 +498,8 @@ document.addEventListener('DOMContentLoaded',function(){
       </div>
       <div class="card fx-reveal card-anim">
         <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg></div>
-        <h3>Assessoria Pessoal</h3>
-        <p>Garantimos que sua empresa siga as leis
-          trabalhistas e que sua equipe receba tudo
-          de forma correta e no prazo.</p>
+        <h3>Assessoria Contabil</h3>
+          <p>Oferecemos suporte contábil completo para manter sua empresa regularizada e pronta para crescer, com contabilidade transparente e orientação profissional em cada etapa.</p>
         <div class="shine"></div>
         <div class="bg">
           <div class="tiles">
@@ -501,13 +521,8 @@ document.addEventListener('DOMContentLoaded',function(){
       </div>
       <div class="card fx-reveal card-anim">
         <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M3 3v18h18"/><path d="m7 15 4-6 4 3 5-8"/></svg></div>
-        <h3>BPO Financeiro</h3>
-        <p>Assumimos a gestão financeira da sua
-          empresa: contas a pagar e receber, fluxo de
-          caixa e conciliações.
-          Com organização e controle, você ganha
-          tempo para focar no crescimento do
-          negócio.</p>
+        <h3>Assessoria Fiscal</h3>
+        <p>Analise, controle e orientação da aplicação de leis e regulamentações fiscais.</p>
         <div class="shine"></div>
         <div class="bg">
           <div class="tiles">
@@ -529,11 +544,8 @@ document.addEventListener('DOMContentLoaded',function(){
       </div>
       <div class="card fx-reveal card-anim">
         <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Consultoria Financeira</h3>
-          <p>Analisamos os números do seu negócio
-          e mostramos o caminho para organizar as
-          finanças, aumentar a lucratividade e
-          tomar decisões mais seguras.</p>
+        <h3>Consultoria Contabil</h3>
+          <p>Entregamos análises contábeis e estratégicas para que você entenda melhor os resultados do seu negócio e tome decisões mais seguras.</p>
         <div class="shine"></div>
         <div class="bg">
           <div class="tiles">
@@ -589,15 +601,15 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="sec-head">
       <span class="eyebrow">Endereço</span>
       <h2>Estamos em Manaus, prontos para atender sua empresa</h2>
-      <p>Nosso escritório fica no bairro Nossa Sra. das Graças, próximo a shoppings e restaurantes. Atendemos presencialmente ou online.</p>
+      <p>Nosso escritório fica no bairro Nossa Paque 10 de Novembro. Atendemos presencialmente ou online.</p>
     </div>
 
     <div class="loc-grid">
       <div class="loc-map fx-reveal">
-        <iframe src="https://www.google.com/maps?q=F12+Contabilidade,-3.1083363,-60.0201409&z=17&output=embed" width="100%" height="340" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Endereço da F12 Contabilidade no mapa"></iframe>
+        <iframe src="https://www.google.com/maps?q=-3.0651237,-60.001828&z=17&output=embed" width="100%" height="340" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Endereço da Perfil Contabilidade"></iframe>
       </div>
       <div class="loc-photo fx-reveal">
-        <img src="img/escritorio-f12.png" alt="Fachada do escritório F12 Contabilidade" style="width:100%;height:100%;object-fit:cover">
+        <img src="img/fachada.png" alt="Fachada do escritório Perfil Contabilidade" style="width:100%;height:100%;object-fit:cover">
       </div>
     </div>
 
@@ -605,7 +617,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <div class="card fx-reveal card-anim">
         <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
         <h3>Endereço</h3>
-        <p>R. Rio Mar, 185, Nossa Sra. das Graças, Manaus - AM</p>
+        <p>Av. Tancredo Neves, 1582, Sala 110, 1º Andar, Edif Pátio Manaus - AM</p>
         <div class="shine"></div>
         <div class="bg">
           <div class="tiles">
@@ -628,7 +640,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <div class="card fx-reveal card-anim">
         <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M22.5 2.5v19h-21v-19h21Z"/><path d="M2.5 7.5h19"/></svg></div>
         <h3>Contato</h3>
-        <p>WhatsApp: (92) 99321-2585<br>Email: contato@f12contabilidade.com.br</p>
+        <p>WhatsApp:(92) 3622-4793<br>priscilla@perfilcontabilidade-am.com.br</p>
         <div class="shine"></div>
         <div class="bg">
           <div class="tiles">
@@ -651,7 +663,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <div class="card fx-reveal card-anim">
         <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
         <h3>Horário</h3>
-        <p>Segunda a sexta, 8h às 18h</p>
+        <p>Segunda a sexta, 8h às 17h</p>
         <div class="shine"></div>
         <div class="bg">
           <div class="tiles">
@@ -762,7 +774,7 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="cta fx-reveal">
       <h2>Vamos cuidar da contabilidade da sua empresa</h2>
       <p>Fale agora com o nosso time pelo WhatsApp e receba um diagnóstico sem compromisso.</p>
-      <a href="https://wa.me/5592993212585" target="_blank" rel="noopener" class="btn btn-wa">
+      <a href="https://wa.me/5592984264616" target="_blank" rel="noopener" class="btn btn-wa">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.36.101 11.943c0 2.105.549 4.16 1.595 5.981L0 24l6.335-1.652a11.882 11.882 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.36 11.949-11.944a11.87 11.87 0 0 0-3.48-8.402"/></svg>
         <span>Falar no WhatsApp</span>
       </a>
@@ -770,203 +782,95 @@ document.addEventListener('DOMContentLoaded',function(){
   </div>
 </section>
 
+  <section class="news" id="noticias">
+    <div class="wrap">
+      <div class="news-head">
+        <span class="eyebrow">Fique informado</span>
+        <h2>Notícias Contábeis</h2>
+        <span class="news-underline"></span>
+      </div>
 
-<section class="steps" id="Mapa-Cultural">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Nosso Mapa Cultural</span>
-      <h2>Nosso Mapa Cultural</h2>
-      <p>Esta empresa serve ao senhor <strong>Jesus</strong></p>
-    </div>
-
-    <div class="grid-3">
-      <div class="card fx-reveal card-anim">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="#1B66FF"/></svg></div>
-        <span class="step-n">Propósito</span>
-        <p>Somos o braço direito da gestão para realização de sonhos.</p>
-        <div class="shine"></div>
-        <div class="bg">
-          <div class="tiles">
-            <div class="tile tile-1"></div>
-            <div class="tile tile-2"></div>
-            <div class="tile tile-3"></div>
-            <div class="tile tile-4"></div>
-            <div class="tile tile-5"></div>
-            <div class="tile tile-6"></div>
-            <div class="tile tile-7"></div>
-            <div class="tile tile-8"></div>
-            <div class="tile tile-9"></div>
-            <div class="tile tile-10"></div>
+      <div class="news-grid">
+        <article class="news-card fx-reveal">
+          <div class="news-thumb news-thumb-teal">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
           </div>
-          <div class="line line-1"></div>
-          <div class="line line-2"></div>
-          <div class="line line-3"></div>
+          <div class="news-body">
+            <span class="news-date">07/08/2026</span>
+            <h3><a href="https://agenciasebrae.com.br/dados/maturidade-digital-3-em-cada-4-pequenos-negocios-no-brasil-usam-computador-no-dia-a-dia/" target="_blank" rel="noopener">Maturidade digital: 3 em cada 4 pequenos negócios já usam computador no dia a dia</a></h3>
+            <p>Pesquisa do Sebrae mostra que a informatização básica já é realidade na maioria das micro e pequenas empresas, mas o Índice de Maturidade Digital das MPEs ainda está em apenas 37% — sinal de que a tecnologia segue subutilizada na gestão do negócio.</p>
+            <a class="news-source" href="https://agenciasebrae.com.br/dados/maturidade-digital-3-em-cada-4-pequenos-negocios-no-brasil-usam-computador-no-dia-a-dia/" target="_blank" rel="noopener">Fonte: Agência Sebrae de Notícias →</a>
+          </div>
+        </article>
+
+        <article class="news-card fx-reveal">
+          <div class="news-thumb news-thumb-blue">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-6h6v6M4 21h16"/></svg>
+          </div>
+          <div class="news-body">
+            <span class="news-date">07/08/2026</span>
+            <h3><a href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/agosto/receita-federal-orienta-sobre-os-procedimentos-para-o-recolhimento-do-imposto-de-renda-retido-na-fonte-sobre-lucros-e-dividendos" target="_blank" rel="noopener">Receita Federal orienta empresas sobre o IRRF de lucros e dividendos</a></h3>
+            <p>Novas instruções detalham como declarar e recolher, via EFD-Reinf e DCTFWeb, a retenção de 10% sobre dividendos mensais acima de R$ 50 mil por pessoa física — regra da Lei 15.270/2025, em vigor desde janeiro de 2026.</p>
+            <a class="news-source" href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/agosto/receita-federal-orienta-sobre-os-procedimentos-para-o-recolhimento-do-imposto-de-renda-retido-na-fonte-sobre-lucros-e-dividendos" target="_blank" rel="noopener">Fonte: Receita Federal →</a>
+          </div>
+        </article>
+
+        <article class="news-card fx-reveal">
+          <div class="news-thumb news-thumb-teal">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l-3 6a4 4 0 0 0 8 0l-3-6M19 8l-3 6a4 4 0 0 0 8 0l-3-6M5 8h14M9 3h6"/></svg>
+          </div>
+          <div class="news-body">
+            <span class="news-date">Agosto/2026</span>
+            <h3><a href="https://www.contabeis.com.br/artigos/78477/reforma-tributaria-aliquota-de-27-91-para-ibs-e-cbs/" target="_blank" rel="noopener">Reforma Tributária: alíquota-padrão do IBS e CBS pode chegar a 27,91%</a></h3>
+            <p>Estudos técnicos apontam que a alíquota conjunta do novo IVA dual pode superar a estimativa inicial do governo. Em 2026 vale a alíquota-teste informativa de 1% (0,1% IBS + 0,9% CBS), sem efeito de arrecadação, enquanto o texto final é calibrado.</p>
+            <a class="news-source" href="https://www.contabeis.com.br/artigos/78477/reforma-tributaria-aliquota-de-27-91-para-ibs-e-cbs/" target="_blank" rel="noopener">Fonte: Contábeis →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a href="#" class="logo" style="margin-bottom:16px"><span class="logo-mark">Perfil</span>Contabilidade</a>
+          <p style="font-size:.9rem;margin-top:14px;max-width:20rem">Contabilidade digital com atendimento humano para empresas de Manaus</p>
+        </div>
+        <div>
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#quem-somos">Quem somos</a></li>
+            <li><a href="#servicos">Soluções</a></li>
+            <li><a href="#localizacao">Endereço</a></li>
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#noticias">Notícias</a></li>
+            <li><a href="https://f12contabilidade.com.br/" target="_blank" rel="noopener">Portal do Cliente</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <ul>
+            <li>WhatsApp: (92) 98426-4616</li>
+            <li>Email: priscilla@perfilcontabilidade-am.com.br</li>
+            <li>Manaus · Amazonas</li>
+            <li>Seg a sex, 8h às 17h</li>
+          </ul>
         </div>
       </div>
-      <div class="card fx-reveal card-anim">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <span class="step-n">Visão</span>
-        <p>Ser uma empresa referência em Contabilidade Estratégica através do conhecimento e de conexões no Brasil até 2026.</p>
-        <div class="shine"></div>
-        <div class="bg">
-          <div class="tiles">
-            <div class="tile tile-1"></div>
-            <div class="tile tile-2"></div>
-            <div class="tile tile-3"></div>
-            <div class="tile tile-4"></div>
-            <div class="tile tile-5"></div>
-            <div class="tile tile-6"></div>
-            <div class="tile tile-7"></div>
-            <div class="tile tile-8"></div>
-            <div class="tile tile-9"></div>
-            <div class="tile tile-10"></div>
-          </div>
-          <div class="line line-1"></div>
-          <div class="line line-2"></div>
-          <div class="line line-3"></div>
-        </div>
-      </div>
-      <div class="card fx-reveal card-anim">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M12 21s-7-4.35-9.5-8.5C1 9 2.5 5.5 6 5c2-.3 4 .8 6 3 2-2.2 4-3.3 6-3 3.5.5 5 4 3.5 7.5C19 16.65 12 21 12 21Z"/></svg></div>
-        <span class="step-n">Valores</span>
-        <p>Excelência, DNA Estratégico, Coerência, Grandeza, Cultura, Compromisso, Humanidade, Clareza.</p>
-        <div class="shine"></div>
-        <div class="bg">
-          <div class="tiles">
-            <div class="tile tile-1"></div>
-            <div class="tile tile-2"></div>
-            <div class="tile tile-3"></div>
-            <div class="tile tile-4"></div>
-            <div class="tile tile-5"></div>
-            <div class="tile tile-6"></div>
-            <div class="tile tile-7"></div>
-            <div class="tile tile-8"></div>
-            <div class="tile tile-9"></div>
-            <div class="tile tile-10"></div>
-          </div>
-          <div class="line line-1"></div>
-          <div class="line line-2"></div>
-          <div class="line line-3"></div>
-        </div>
-      </div>
-      <div class="card fx-reveal card-anim">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="16 8 14 14 8 16 10 10 16 8"/></svg></div>
-        <span class="step-n">Missão</span>
-        <p>Levar crescimento estratégico, cultura e
-            conexões para nosso time, clientes,
-            parceiros e sociedade, através da
-            educação, promovendo encontros,
-            buscando inovação sendo sempre o braço
-            direito para quem caminha conosco.</p>
-        <div class="shine"></div>
-        <div class="bg">
-          <div class="tiles">
-            <div class="tile tile-1"></div>
-            <div class="tile tile-2"></div>
-            <div class="tile tile-3"></div>
-            <div class="tile tile-4"></div>
-            <div class="tile tile-5"></div>
-            <div class="tile tile-6"></div>
-            <div class="tile tile-7"></div>
-            <div class="tile tile-8"></div>
-            <div class="tile tile-9"></div>
-            <div class="tile tile-10"></div>
-          </div>
-          <div class="line line-1"></div>
-          <div class="line line-2"></div>
-          <div class="line line-3"></div>
-        </div>
+      <div class="foot-bottom">
+        <span>© 2026 Perfil Contabilidade. Todos os direitos reservados.</span>
+        <span>CNPJ 16.905.102/0001-96 · CRC-AM 000000</span>
       </div>
     </div>
-  </div>
-</section>
-
-
-<section class="about" id="Eventos">
-  <div class="wrap">
-  <div class="sec-head">
-    <span class="eyebrow">Eventos</span>
-    <h2>Nossos Eventos</h2>
-    <p>2026</p>
-  </div>
-  </div>
-  <div class="wrap about-in"> 
-
-    <div class="about-photo fx-reveal">
-      <div class="carousel" aria-label="Carrossel de fotos de eventos">
-        <div class="carousel-track">
-          <div class="carousel-slide">
-            <img src="img/event1.jpg" alt="F12 Summit 1">
-            <div class="carousel-caption">XXV Encontro F12</div>
-          </div>
-          <div class="carousel-slide">
-            <img src="img/event2.jpg" alt="F12 Summit 2">
-            <div class="carousel-caption">23º Encontros F12</div>
-          </div>
-          <div class="carousel-slide">
-            <img src="img/event3.jpg" alt="F12 Summit 3">
-            <div class="carousel-caption">Encerramento do evento</div>
-          </div>
-        </div>
-        <button class="carousel-btn prev" aria-label="Slide anterior">‹</button>
-        <button class="carousel-btn next" aria-label="Próximo slide">›</button>
-        <div class="carousel-dots" aria-hidden="false"></div>
-      </div>
     </div>
+  </footer>
 
-    <div class="fx-reveal">
-      <span class="eyebrow">ENCONTRO F12</span>
-      <h2>Fique por dentro dos próximos eventos da F12 Contabilidade</h2>
-      <p>Participe dos nossos encontros e palestras com especialistas, pensados para impulsionar o seu negócio e expandir suas conexões.</p>
-      <!--<div class="about-stats">
-        <div><b>100%</b><span>Atendimento local e Online em Manaus</span></div>
-        <div><b>24h</b><span>Acompanhamento pelo Portal do Cliente</span></div>
-      </div> -->
-    </div>
-  </div>
-</section>
-
-
-</main>
-
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <a href="#" class="logo" style="margin-bottom:16px"><span class="logo-mark">F12</span>Contabilidade</a>
-        <p style="font-size:.9rem;margin-top:14px;max-width:20rem">Contabilidade digital com atendimento humano para empresas de Manaus</p>
-      </div>
-      <div>
-        <h4>Navegação</h4>
-        <ul>
-          <li><a href="#quem-somos">Quem somos</a></li>
-          <li><a href="#servicos">Soluções</a></li>
-          <li><a href="#localizacao">Endereço</a></li>
-          <li><a href="#como-funciona">Como funciona</a></li>
-          <li><a href="#contato">Contato</a></li>
-          <li><a href="#Eventos">Eventos</a></li>
-          <li><a href="https://f12contabilidade.com.br/" target="_blank" rel="noopener">Portal do Cliente</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contato</h4>
-        <ul>
-          <li>WhatsApp: (92) 99321-2585</li>
-          <li>contato@f12contabilidade.com.br</li>
-          <li>Manaus · Amazonas</li>
-          <li>Seg a sex, 8h às 18h</li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 F12 Contabilidade. Todos os direitos reservados.</span>
-      <span>CNPJ 31.542.215/0001-68 · CRC-AM 000000</span>
-    </div>
-  </div>
-  </div>
-</footer>
-
-<script>
+  <script>
 // Carousel initialization
 document.addEventListener('DOMContentLoaded', function(){
   document.querySelectorAll('.carousel').forEach(function(carousel){
@@ -1015,9 +919,10 @@ document.addEventListener('DOMContentLoaded', function(){
 </script>
 
 <!-- Botão flutuante do WhatsApp -->
-<a class="wa-float" href="https://wa.me/5592993212585" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+<a class="wa-float" href="https://wa.me/5592984264616" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
   <img src="img/whatsapp-icon-transparent.png" alt="WhatsApp">
 </a>
-
+</body>
+</html>
 </body>
 </html>
