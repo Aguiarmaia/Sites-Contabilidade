@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Perfil Contabilidade</title>
-<link rel="icon" type="image/png" href="img/favicon.png">
-<link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="icon" type="image/png" href="img/favicon.png?v=2">
+<link rel="shortcut icon" type="image/png" href="img/favicon.png?v=2">
+<link rel="apple-touch-icon" href="img/favicon.png?v=2">
 <!-- Loader temporariamente desativado -->
 <meta name="description" content="Contabilidade completa em Manaus: abertura de empresa, folha de pagamento, fiscal e incentivos da Zona Franca. Atendimento próximo e portal digital para acompanhar tudo online.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +17,7 @@
     --navy:#276c77;
     --navy-2:#1B4B54;
     --blue:#2F828F;
-    --blue-dark:##1F565F;
+    --blue-dark:#1F565F;
     --green:#22C55E;
     --ice:#F2F5FA;
     --white:#FFFFFF;
@@ -26,8 +27,8 @@
     --shadow:0 10px 30px rgba(11,18,32,.10);
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);line-height:1.65;font-size:16px}
+  html{height:100%;scroll-behavior:smooth}
+  body{margin:0;font-family:'Inter',sans-serif;color:var(--text);background:var(--white);line-height:1.65;font-size:16px;min-height:100%;position:relative}
 
   .services{background:var(--ice)}
   h1,h2,h3{font-family:'Archivo',sans-serif;color:var(--navy);line-height:1.15}
@@ -52,17 +53,17 @@
   nav.scrolled{box-shadow:0 4px 30px -5px rgba(0,0,0,.35)}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px;transition:height .3s}
   nav.scrolled .nav-in{height:56px}
-  .logo{display:flex;align-items:center;gap:12px;color:#fff;font-family:'Archivo',sans-serif;font-weight:800;font-size:1.15rem;white-space:nowrap}
+  .logo{display:inline-flex;align-items:center;gap:12px;color:#fff;font-family:'Archivo',sans-serif;font-weight:800;font-size:1.15rem;white-space:nowrap;background:white;padding:8px 16px;border-radius:12px;transition:.2s}
   nav:not(.scrolled) .logo{display:none}
   nav:not(.scrolled) .nav-in{justify-content:center}
   .logo-mark{background:#fff;color:var(--navy);border-radius:9px;width:40px;height:40px;display:grid;place-items:center;font-size:.95rem;font-weight:800}
   .nav-links{display:flex;gap:30px;align-items:center}
-  .nav-links a{color:rgba(255,255,255,.75);font-size:.92rem;font-weight:500;transition:.2s}
+  .nav-links a{color:white;font-size:.92rem;font-weight:500;transition:.2s; font-weight:600}
   .nav-links a:hover{color:#fff}
-  .nav-portal{background:var(--blue);color:#fff!important;padding:9px 20px;border-radius:10px;font-weight:600;position:relative;overflow:hidden;isolation:isolate}
-  .nav-portal::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(255,255,255,.22) 0 0) no-repeat calc(200% - var(--p,0%)) 100% / 200% var(--p,.2em);transition:.3s var(--t,0s),background-position .3s calc(.3s - var(--t,0s))}
+  .nav-portal{background:#fff;color:var(--navy)!important;padding:9px 22px;border-radius:10px;font-weight:700;position:relative;overflow:hidden;isolation:isolate;box-shadow:0 4px 16px rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s}
+  .nav-portal::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(39,108,119,.12) 0 0) no-repeat calc(200% - var(--p,0%)) 100% / 200% var(--p,.2em);transition:.3s var(--t,0s),background-position .3s calc(.3s - var(--t,0s))}
   .nav-portal:hover::after{--p:100%;--t:.3s}
-  .nav-portal:hover{background:var(--blue-dark)}
+  .nav-portal:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.25)}
   .menu-btn{display:none;background:none;border:none;cursor:pointer;width:44px;height:44px;border-radius:10px;padding:0;flex-direction:column;align-items:center;justify-content:center;gap:5px;transition:background .2s}
   .menu-btn:hover{background:rgba(255,255,255,.08)}
   .menu-btn-bar{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .2s ease}
@@ -71,28 +72,26 @@
   .menu-btn.open .menu-btn-bar:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
   /* HERO */
-  .hero{background:var(--navy);padding:0 0 0px;position:relative;overflow:hidden}
-  .hero::after{content:"";position:absolute;right:-180px;top:-180px;width:520px;height:620px;border-radius:50%;}
+  .hero{padding:0 0 0px;position:relative;overflow:hidden}
 
   .hero-in{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:20px;position:relative;text-align:center;min-height:clamp(340px,50vh,450px)}
   .hero-left{position:relative;z-index:1}
   .hero h1{color:#fff;font-size:clamp(2.1rem,4.4vw,3.3rem);font-weight:800;margin-bottom:28px}
   .hero h1 em{font-style:normal;color:#6FA0FF}
-  .hero-eyebrow{display:inline-flex;flex-wrap:wrap;row-gap:4px;align-items:center;gap:8px;font-size:.92rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);background:linear-gradient(90deg,rgba(27,102,255,.08),rgba(111,160,255,.04));padding:12px 18px;border-radius:8px;box-shadow:0 10px 30px rgba(11,18,32,.08);transition:transform .25s,box-shadow .25s;margin-top:24px}
-  .hero-eyebrow:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(11,18,32,.12)}
+  .hero-eyebrow{display:inline-flex;flex-wrap:wrap;row-gap:4px;align-items:center;gap:8px;font-size:.92rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:white;background:var(--blue);padding:12px 18px;border-radius:8px;box-shadow:0 10px 30px rgba(11,18,32,.08);transition:transform .25s,box-shadow .25s;margin-top:24px}
   .hero p.lead{color:rgba(255,255,255,.78);font-size:1.12rem;max-width:34rem;margin-bottom:32px}
   .hero-left img{width:100%;height:100%;object-fit:cover;border-radius:18px;box-shadow:var(--shadow)}
   .hero-left{position:relative;overflow:visible}
   .hero-left::before{content:"";position:absolute;inset:0;border-radius:18px;pointer-events:none;background:linear-gradient(90deg,var(--navy) 0%,rgba(39,108,119,0) 60%);}
   .hero-left img{position:relative;z-index:1}
   @media (max-width:900px){.hero-left::before{display:none}}
-  .hero-hint{margin-top:22px;margin-left:auto;margin-right:auto;color:rgba(255,255,255,.85);font-size:1.03rem;text-shadow:0 6px 20px rgba(0,0,0,.45);max-width:44rem}
+  .hero-hint{margin-top:22px;margin-left:auto;margin-right:auto;color:rgba(0, 0, 0, 0.85);font-size:1.03rem;text-shadow:0 6px 20px rgba(0,0,0,.45);max-width:44rem}
 
   /* Flip words (Há 19 anos / confiança / parcerias / ...) */
-  .hero-brand-row{display:flex;align-items:center;justify-content:center;gap:36px;margin-bottom:6px}
+  .hero-brand-row{display:flex;align-items:center;justify-content:center;gap:36px;margin-bottom:6px;margin-top:34px;background:linear-gradient(135deg,rgba(255,255,255,.95),rgba(255,255,255,.82));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.45);padding:16px 30px;border-radius:18px;box-shadow:0 8px 32px white}
   .flip{display:inline-block;height:1.9em;overflow:hidden;vertical-align:middle}
   .flip-track{display:flex;flex-direction:column;animation:flip-cycle 10s infinite}
-  .flip-item{height:1.9em;line-height:1.9em;color:var(--blue);white-space:nowrap}
+  .flip-item{height:1.9em;line-height:1.9em;color:#fff;white-space:nowrap}
   @keyframes flip-cycle{
     0%,16%{transform:translateY(0)}
     20%,36%{transform:translateY(-1.9em)}
@@ -109,6 +108,7 @@
 
 
   /* QUEM SOMOS */
+  .about{background:var(--ice)}
   .about-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
   .about-photo{border-radius:18px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5}
     .about-photo{position:relative}
@@ -125,7 +125,7 @@
     .carousel-dots{position:absolute;left:50%;transform:translateX(-50%);bottom:10px;display:flex;gap:8px}
     .carousel-dots button{width:10px;height:10px;border-radius:50%;border:none;background:rgba(255,255,255,0.45);cursor:pointer}
     .carousel-dots button.active{background:#fff}
-  .about h2{margin-bottom:16px}
+  .about h2{margin-bottom:16px; background:linear-gradient(135deg,var(--blue),var(--blue-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:clamp(1.7rem,3vw,2.3rem);font-weight:800}
   .about p{color:var(--muted);margin-bottom:14px}
   .about-stats{display:flex;gap:36px;margin-top:24px;flex-wrap:wrap}
   .about-stats b{display:block;font-family:'Archivo',sans-serif;font-size:1.8rem;color:var(--navy);font-weight:800}
@@ -141,7 +141,7 @@
   .card:hover{transform:translateY(-5px);border-color:#D8E4FB}
   .card .ico{width:48px;height:48px;border-radius:12px;background:#E7EFFF;display:grid;place-items:center;margin-bottom:18px}
   .card h3{font-size:1.12rem;font-weight:700;margin-bottom:9px}
-  .card p{font-size:.93rem;color:var(--muted)}
+  .card p{font-size:.93rem;color:var(--muted);text-align:justify}
 
 
   /*Card hover effects */
@@ -246,7 +246,7 @@
   @media (max-width:600px){.news-card{flex-basis:82%}}
 
   /* CTA FINAL */
-  .cta{background:linear-gradient(135deg,var(--blue),#0D47D9);color:#fff;text-align:center;border-radius:22px;padding:64px 40px;margin:0 24px}
+  .cta{background:var(--navy);color:#fff;text-align:center;border-radius:22px;padding:64px 40px;margin:0 24px}
   .cta h2{color:#fff;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:14px}
   .cta p{color:rgba(255,255,255,.85);max-width:34rem;margin:0 auto 30px}
   .cta .btn-wa{background:#fff;color:var(--blue)}
@@ -261,8 +261,8 @@
   .foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:26px;font-size:.8rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
   /* WhatsApp flutuante */
-  .wa-float{position:fixed;bottom:24px;right:24px;z-index:60;background:#37BC69;width:62px;height:62px;border-radius:18px;display:grid;place-items:center;box-shadow:0 4px 14px rgba(34,197,94,.35);transition:.2s}
-  .wa-float img{width:46px;height:46px;object-fit:contain;display:block}
+  .wa-float{position:fixed;bottom:24px;right:24px;z-index:60;background:#37BC69;width:62px;height:62px;border-radius:50px;display:grid;place-items:center;box-shadow:0 4px 14px rgba(34,197,94,.35);transition:.2s}
+  .wa-float img{width:36px;height:36px;object-fit:contain;display:block;filter:brightness(0) invert(1)}
   .wa-float:hover{transform:scale(1.08)}
 
   /* PRELOADER */
@@ -299,8 +299,9 @@
     .hero-hint{margin-left:auto;margin-right:auto;margin-top:24px}
   }
   @media (max-width:420px){
-    .logo{font-size:.95rem;gap:8px}
+    .logo{font-size:.95rem;gap:8px;background:white;padding:6px 12px;border-radius:10px}
     .logo-mark{width:34px;height:34px;font-size:.8rem}
+    
   }
   
   /*efeito do botão do whatsapp da conversa inicial*/
@@ -312,10 +313,9 @@
 </style>
 </head>
 <body>
-
 <main>
 
-<!--leito inicial "logo" F12 Contabilidade !-->
+<!--leito inicial "logo" F12 Contabilidawde !-->
 
   <div id="preloader">
     <img src="img/perfil-contabilidade.png" alt="Perfil Contabilidade" style="width:min(280px,62vw);height:auto">
@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded',function(){
     setTimeout(function(){
       pl.classList.add('hide');
       document.documentElement.classList.remove('preloading');
-    }, 2500);
+    }, 0);
   }
   window.addEventListener('scroll',function(){
     document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 100);
@@ -390,8 +390,8 @@ document.addEventListener('DOMContentLoaded',function(){
           </span>
         </span>
       </div>
-      <p class="hero-hint">Aqui cuidamos do seu negócio como se fosse nosso, com tecnologia moderna e atendimento próximo de verdade — ao seu lado para crescer com confiança e tranquilidade.</p>
-
+      <p class="hero-hint">Você não precisa cuidar da sua empresa sozinho: estamos ao seu lado, com atendimento próximo e tecnologia moderna, para você crescer com confiança e tranquilidade.</p>
+    </div>
   </div>
 </header>
 
@@ -400,7 +400,7 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="fx-reveal">
       <span class="eyebrow">Quem somos</span>
       <h2>EXPERIÊNCIA VOCÊ PRECISA. RESULTADOS QUE VOCÊ QUER</h2>
-      <p>É uma empresa que presta serviços para micro, pequenas, médias e grandes empresas nas áreas de Contabilidade, Dpto Fiscal/Tributário, Dpto Pessoal/Trabalhista, processuais, como: abertura, alteração e baixa de Empresas, e Nossa equipe formada por profissionais capacitados para atender com qualidade e eficiência todas as necessidades para manter uma Empresa saudável e competitiva.</p>
+      <p>Atendemos micro, pequenas, médias e grandes empresas nas áreas contábil, fiscal/tributária e pessoal/trabalhista, cuidando também de processos como abertura, alteração e baixa de empresas. Nossa equipe é formada por profissionais experientes, prontos para cuidar de cada detalhe e manter seu negócio saudável e competitivo.</p>
       <div class="about-stats">
         <div><b>+200</b><span>Clientes atendidos</span></div>
         
@@ -426,7 +426,7 @@ document.addEventListener('DOMContentLoaded',function(){
           </div>
 
           <div class="carousel-slide">
-            <img src="img/perfil-contabilidade.png" alt="###">
+            <img src="img/equipe2.png" alt="###">
             <div class="carousel-caption">Equipe em atendimento</div>
           </div>
         </div>
@@ -448,7 +448,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
     <div class="grid-3">
       <div class="card fx-reveal card-anim" role="link" tabindex="0" aria-label="Abrir endereço no Google Maps" onclick="window.open('https://www.google.com/maps?q=-3.0651237,-60.001828','_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.google.com/maps?q=-3.0651237,-60.001828','_blank')}" style="cursor:pointer">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.6"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
         <h3>Abertura De Empresa</h3>
         <p>Abrimos sua empresa com todo o suporte necessário, facil e sem burocracia.</p>
         <div class="shine"></div>
@@ -471,7 +471,7 @@ document.addEventListener('DOMContentLoaded',function(){
         </div>
       </div>
       <div class="card fx-reveal card-anim">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 10h8M8 14h5"/></svg></div>
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 10h8M8 14h5"/></svg></div>
         <h3>Abertura de Filial</h3>
           <p>Mantemos sua empresa em dia com
             impostos e tributos, orientando para pagar
@@ -497,7 +497,7 @@ document.addEventListener('DOMContentLoaded',function(){
         </div>
       </div>
       <div class="card fx-reveal card-anim">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg></div>
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg></div>
         <h3>Assessoria Contabil</h3>
           <p>Oferecemos suporte contábil completo para manter sua empresa regularizada e pronta para crescer, com contabilidade transparente e orientação profissional em cada etapa.</p>
         <div class="shine"></div>
@@ -520,7 +520,7 @@ document.addEventListener('DOMContentLoaded',function(){
         </div>
       </div>
       <div class="card fx-reveal card-anim">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M3 3v18h18"/><path d="m7 15 4-6 4 3 5-8"/></svg></div>
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.6"><path d="M3 3v18h18"/><path d="m7 15 4-6 4 3 5-8"/></svg></div>
         <h3>Assessoria Fiscal</h3>
         <p>Analise, controle e orientação da aplicação de leis e regulamentações fiscais.</p>
         <div class="shine"></div>
@@ -543,7 +543,7 @@ document.addEventListener('DOMContentLoaded',function(){
         </div>
       </div>
       <div class="card fx-reveal card-anim">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <h3>Consultoria Contabil</h3>
           <p>Entregamos análises contábeis e estratégicas para que você entenda melhor os resultados do seu negócio e tome decisões mais seguras.</p>
         <div class="shine"></div>
@@ -566,7 +566,7 @@ document.addEventListener('DOMContentLoaded',function(){
         </div>
       </div>
       <div class="card fx-reveal card-anim">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div>
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div>
         <h3>Assessoria Societária</h3>
         <p>Cuidamos da abertura, alteração e
           regularização da sua empresa.
@@ -614,8 +614,8 @@ document.addEventListener('DOMContentLoaded',function(){
     </div>
 
     <div class="grid-3" style="margin-top:44px">
-      <div class="card fx-reveal card-anim">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <div class="card fx-reveal card-anim" role="link" tabindex="0" aria-label="Abrir endereço no Google Maps" onclick="window.open('https://www.google.com/maps?q=-3.0651237,-60.001828','_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.google.com/maps?q=-3.0651237,-60.001828','_blank')}" style="cursor:pointer">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.6"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
         <h3>Endereço</h3>
         <p>Av. Tancredo Neves, 1582, Sala 110, 1º Andar, Edif Pátio Manaus - AM</p>
         <div class="shine"></div>
@@ -638,9 +638,9 @@ document.addEventListener('DOMContentLoaded',function(){
         </div>
       </div>
       <div class="card fx-reveal card-anim">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><path d="M22.5 2.5v19h-21v-19h21Z"/><path d="M2.5 7.5h19"/></svg></div>
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.6"><path d="M22.5 2.5v19h-21v-19h21Z"/><path d="M2.5 7.5h19"/></svg></div>
         <h3>Contato</h3>
-        <p>WhatsApp:(92) 3622-4793<br>priscilla@perfilcontabilidade-am.com.br</p>
+        <p>WhatsApp:<a href="https://wa.me/559236224793" target="_blank" rel="noopener" style="text-decoration:underline">(92) 3622-4793</a><br>Email:<a href="mailto:priscilla@perfilcontabilidade-am.com.br" style="text-decoration:underline">priscilla@perfilcontabilidade-am.com.br</a></p>
         <div class="shine"></div>
         <div class="bg">
           <div class="tiles">
@@ -661,7 +661,7 @@ document.addEventListener('DOMContentLoaded',function(){
         </div>
       </div>
       <div class="card fx-reveal card-anim">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B66FF" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
         <h3>Horário</h3>
         <p>Segunda a sexta, 8h às 17h</p>
         <div class="shine"></div>
@@ -793,7 +793,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <div class="news-grid">
         <article class="news-card fx-reveal">
           <div class="news-thumb news-thumb-teal">
-            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <img src="img/capa1.png" alt="Maturidade digital: 3 em cada 4 pequenos negócios já usam computador no dia a dia">
           </div>
           <div class="news-body">
             <span class="news-date">07/08/2026</span>
@@ -805,7 +805,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
         <article class="news-card fx-reveal">
           <div class="news-thumb news-thumb-blue">
-            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-6h6v6M4 21h16"/></svg>
+            <img src="img/capa2.png" alt="Maturidade digital: 3 em cada 4 pequenos negócios já usam computador no dia a dia">
           </div>
           <div class="news-body">
             <span class="news-date">07/08/2026</span>
@@ -817,7 +817,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
         <article class="news-card fx-reveal">
           <div class="news-thumb news-thumb-teal">
-            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l-3 6a4 4 0 0 0 8 0l-3-6M19 8l-3 6a4 4 0 0 0 8 0l-3-6M5 8h14M9 3h6"/></svg>
+            <img src="img/capa3.png" alt="Maturidade digital: 3 em cada 4 pequenos negócios já usam computador no dia a dia">
           </div>
           <div class="news-body">
             <span class="news-date">Agosto/2026</span>
@@ -826,6 +826,44 @@ document.addEventListener('DOMContentLoaded',function(){
             <a class="news-source" href="https://www.contabeis.com.br/artigos/78477/reforma-tributaria-aliquota-de-27-91-para-ibs-e-cbs/" target="_blank" rel="noopener">Fonte: Contábeis →</a>
           </div>
         </article>
+
+        <article class="news-card fx-reveal">
+          <div class="news-thumb news-thumb-blue">
+            <img src="img/capa4.png" alt="Simples Nacional: prazo para decidir sobre migração ao novo sistema tributário vai até setembro">
+          </div>
+          <div class="news-body">
+            <span class="news-date">Agosto/2026</span>
+            <h3><a href="https://www.contabilivre.com.br/blog/simples-nacional-2026-o-que-mudou/" target="_blank" rel="noopener">Simples Nacional: prazo para decidir sobre migração ao novo sistema tributário vai até setembro</a></h3>
+            <p>Desde 3 de agosto, o preenchimento de IBS e CBS na nota fiscal eletrônica é obrigatório para empresas do regime regular. Optantes do Simples Nacional e MEIs têm até setembro para decidir se seguem no regime favorecido ou migram para o novo sistema em 2027.</p>
+            <a class="news-source" href="https://www.contabilivre.com.br/blog/simples-nacional-2026-o-que-mudou/" target="_blank" rel="noopener">Fonte: Contabilivre →</a>
+          </div>
+        </article>
+
+        <article class="news-card fx-reveal">
+          <div class="news-thumb news-thumb-teal">
+            <img src="img/capa5.png" alt="Simples Nacional: prazo para decidir sobre migração ao novo sistema tributário vai até setembro">
+          </div>
+          <div class="news-body">
+            <span class="news-date">04/08/2026</span>
+            <h3><a href="https://www.contabeis.com.br/noticias/78509/receita-pagara-ultimo-lote-da-restituicao-do-ir-2026-no-fim-de-agosto/" target="_blank" rel="noopener">Receita paga último lote da restituição do Imposto de Renda 2026 no fim de agosto</a></h3>
+            <p>A Receita Federal libera em 29 de agosto o quarto e último lote de restituição do IR 2026, contemplando quem regularizou pendências ou saiu da malha fina. A consulta ao lote fica disponível a partir do dia 24.</p>
+            <a class="news-source" href="https://www.contabeis.com.br/noticias/78509/receita-pagara-ultimo-lote-da-restituicao-do-ir-2026-no-fim-de-agosto/" target="_blank" rel="noopener">Fonte: Contábeis →</a>
+          </div>
+        </article>
+
+        <article class="news-card fx-reveal">
+          <div class="news-thumb news-thumb-blue">
+            <img src="img/capa6.png" alt="Pequenos negócios já somam 24 milhões de empresas ativas no Brasil">
+          </div>
+          <div class="news-body">
+            <span class="news-date">Agosto/2026</span>
+            <h3><a href="https://agenciasebrae.com.br/dados/pequenos-negocios-somam-24-milhoes-de-empresas-ativas/" target="_blank" rel="noopener">Pequenos negócios já somam 24 milhões de empresas ativas no Brasil</a></h3>
+            <p>Levantamento do Sebrae mostra que micro e pequenas empresas respondem por 95% das empresas ativas no país e por 26,5% do PIB nacional, reforçando o papel dos pequenos negócios na economia brasileira.</p>
+            <a class="news-source" href="https://agenciasebrae.com.br/dados/pequenos-negocios-somam-24-milhoes-de-empresas-ativas/" target="_blank" rel="noopener">Fonte: Agência Sebrae de Notícias →</a>
+          </div>
+        </article>
+
+
       </div>
     </div>
   </section>
@@ -837,7 +875,7 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="wrap">
       <div class="foot-grid">
         <div>
-          <a href="#" class="logo" style="margin-bottom:16px"><span class="logo-mark">Perfil</span>Contabilidade</a>
+          <a href="#" class="logo" style="margin-bottom:10px"><img src="img/perfil-contabilidade.png" alt="Perfil Contabilidade" style="height:36px;width:auto;display:block"></a>
           <p style="font-size:.9rem;margin-top:14px;max-width:20rem">Contabilidade digital com atendimento humano para empresas de Manaus</p>
         </div>
         <div>
@@ -919,10 +957,8 @@ document.addEventListener('DOMContentLoaded', function(){
 </script>
 
 <!-- Botão flutuante do WhatsApp -->
-<a class="wa-float" href="https://wa.me/5592984264616" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+<a class="wa-float" href="https://wa.me/5592993212585" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
   <img src="img/whatsapp-icon-transparent.png" alt="WhatsApp">
 </a>
-</body>
-</html>
 </body>
 </html>
